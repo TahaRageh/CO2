@@ -1,0 +1,15 @@
+module ReadFromMemoryFile ;
+
+reg [31:0] MyMemory [0:8191] ;
+
+initial
+begin
+$readmemh("Inst_Memory.txt",MyMemory); // h is for hexa 
+
+#5
+
+$display("%h",MyMemory[0]); // h is for hexa 
+ 
+end
+
+endmodule
